@@ -18,6 +18,7 @@ public class Sesion1 : MonoBehaviour
         debug.log(divide);
 
 
+
     }
 
     // Update is called once per frame
