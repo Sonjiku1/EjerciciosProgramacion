@@ -42,7 +42,8 @@ public class sesion2 : MonoBehaviour
         EDU = (Random.Range(1, 7) + Random.Range(1, 7)) + 6 ) *5;
 
         int Edad = Random.Range(15, 19);
-    }
+    
+    
         if (Edad => 15 && Edad <= 19)
         {
      Debug.Log("Modificado Edad");
@@ -78,12 +79,53 @@ public class sesion2 : MonoBehaviour
 {
     Debug.Log("Has mejorado tu EDU");
     EDU = EDU + Random.Range(1, 11);
+}  
+     int Mov = 0;
+     if (des < TAM && fue < TAM)
+{
+    Mov = 7;
+} 
+     if (des < TAM && fue > TAM)
+{
+    Mov = 8;
 }
+     if (des > TAM && fue > TAM)
+{
+    Mov = 9;
 }
 
+     if Edad (40, 49)
+    {
+    Mov <= 1;
+    }
+     if Edad(50, 59)
+    {
 
+    Mov <= 2;
+    }
+
+     if Edad(60, 69){
+
+    Mov <= 3;
 
     }
+    if Edad(70, 79)
+    {
+
+    Mov <= 4;
+    }
+    if Edad(80, 90)
+    {
+
+    Mov <= 5;
+    }
+    
+
+
+
+
+
+}
 
     // Update is called once per frame
     void Update()
