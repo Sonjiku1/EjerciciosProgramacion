@@ -5,7 +5,7 @@ public class bucles : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int n 
+        int n= 0;
       while (n < 100)
         {
             Debug.Log("El valor hasta n es:" + n);

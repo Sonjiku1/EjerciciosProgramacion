@@ -2,119 +2,124 @@ using UnityEngine;
 
 public class ejerciciosprogra : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //hacer f(x)=10*x^3+5*x^"+10*x+15
+        // 1. Calcular f(x) = 10*x³ + 5*x² + 10*x + 15
+        float x = 2.0f;
+        float resultado = 10f * Mathf.Pow(x, 3) + 5f * Mathf.Pow(x, 2) + 10f * x + 15f;
+        Debug.Log("Resultado de f(x): " + resultado);
 
-        float x;
-        {
-            x = 2.0f;
-            float resultado = 10f * Mathf.pow(x, 3) + 5 * Mathf.pow(x, 2) + 10 * x + 15;
-        }
-        
 
-        //hacer un programa considerando el año de nacimiento obtenga edad.
-
+        // 2. Calcular edad a partir del año de nacimiento
         int añoNac = 2005;
-        {
-            int añoActual = 2026;
-            int edad = añoActual - añoNac;
-        }
-      
-      
+        int añoActual = 2026;
+        int edadCalculada = añoActual - añoNac;
+        Debug.Log("Edad: " + edadCalculada);
 
-       
+
+        // 3. Verificar si puede acceder (mayor de 18)
         int edad = 20;
+        if (edad > 18)
         {
-            if (edad > 18)
-            {
-                debug.log(true "puede acceder");
-            }
-            Debug.log(++"fin del programa");
-
-
+            Debug.Log("Puede acceder");
         }
+        Debug.Log("Fin del programa");
 
-        int flappyPoseY;
 
-        int upperLimitflappyPoseY;
-        int lowerLimitflappyPoseY;
+        // 4. Límites de Flappy Bird
+        int flappyPoseY = 5;                 // posición actual (ejemplo)
+        int upperLimitflappyPoseY = 10;      // límite superior
+        int lowerLimitflappyPoseY = 0;       // límite inferior
 
         if (flappyPoseY > upperLimitflappyPoseY)
         {
-            Debug.log("muerto");
+            Debug.Log("Muerto (por arriba)");
         }
         if (flappyPoseY < lowerLimitflappyPoseY)
         {
-            Debug.log("muerto");
+            Debug.Log("Muerto (por abajo)");
         }
 
+
+        // 5. Día de la semana según índice
         int indiceDia = 1;
 
         if (indiceDia == 1)
         {
-            Debug.log("lunes");
+            Debug.Log("Lunes");
         }
-
-        if (indiceDia == 2)
+        else if (indiceDia == 2)
         {
-            Debug.log("Martes");
+            Debug.Log("Martes");
         }
-
-        if (indiceDia == 3)
+        else if (indiceDia == 3)
         {
-            Debug.log("miercoles");
+            Debug.Log("Miércoles");
         }
-
-        if (indiceDia == 4)
+        else if (indiceDia == 4)
         {
-            Debug.log("jueves");
+            Debug.Log("Jueves");
         }
-
-        if (indiceDia == 5)
+        else if (indiceDia == 5)
         {
-            Debug.log("viernes");
+            Debug.Log("Viernes");
         }
-
-        if (indiceDia == 6)
+        else if (indiceDia == 6)
         {
-            Debug.log("sabado");
+            Debug.Log("Sábado");
         }
-
-        if (indiceDia == 7)
+        else if (indiceDia == 7)
         {
-            Debug.log("Domingo");
+            Debug.Log("Domingo");
+        }
+        else
+        {
+            Debug.Log("Día inválido");
         }
 
 
-         
-        int x 
-        int y
+        // 6. Determinar cuadrante
+        int posX = 3;
+        int posY = -2;
 
-    if ( x > 0 && y > 0) {
+        if (posX > 0 && posY > 0)
+        {
+            Debug.Log("Cuadrante 1");
+        }
+        else if (posX < 0 && posY > 0)
+        {
+            Debug.Log("Cuadrante 2");
+        }
+        else if (posX < 0 && posY < 0)
+        {
+            Debug.Log("Cuadrante 3");
+        }
+        else if (posX > 0 && posY < 0)
+        {
+            Debug.Log("Cuadrante 4");
+        }
+        else
+        {
+            Debug.Log("Está en un eje");
+        }
 
-            Debug.log("cuadrante1");
+
+        // 7. Piedra, papel o tijera (ejemplo simple)
+        int rock = 1;
+        int paper = 2;
+        int scissors = 3;
+
+        // Ejemplo: piedra vs papel
+        if (rock == 1 && paper == 2)
+        {
+            Debug.Log("Paper wins");
+        }
     }
-        else { 
-            if(x<0 && y < 0) {
-                Debug.log("cuadrante 3")
-            }
-
-            int rock = 1;
-            int paper = 2;
-            int scissors = 3;
-
-            if ( rock == 1 && paper == 2 )
-            {
-                Debug.log("paper wins");
-            }
-
-        
 
 
-    // Update is called once per frame
-    void Update()
+
+// Update is called once per frame
+void Update()
     {
         
     }
