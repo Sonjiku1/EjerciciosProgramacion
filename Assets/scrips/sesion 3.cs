@@ -11,14 +11,14 @@ public class sesion3 : MonoBehaviour
         }
 
        // escribir el codifo para sumar las secuemcias de números del 1 al n, siendo n una variable entera. ej= 5; 1+2+3+4+5 = 15
-        int 5;
+        int a = 5;
         int suma = 0;
-        for (int i = 1; i <= n; i++) 
+        for (int i = 1; i <= a; i++) 
         {
             suma += i;
         }
 
-        Debug.Log("La suma de los números del 1 al " + n + " es: " + suma);
+        Debug.Log("La suma de los números del 1 al " + a + " es: " + suma);
 
 
         // escribe rl codigo para mostrar la cuenta atras de un explosivo,  empezando por un valor de almacenamiento en initial_time y mostrando "EXPLOSION" cuando termine la cuenta atras
@@ -55,12 +55,83 @@ public class sesion3 : MonoBehaviour
             int dado1 = Random.Range(1, 7);
             int dado2 = Random.Range(1, 7);
             int dado3 = Random.Range(1, 7);
-            int suma_dados = dado1 + dado2 + dado3;
+            int sumadados = dado1 + dado2 + dado3;
             Debug.Log("Tirada " + (i + 1) + ": Dado 1: " + dado1 + ", Dado 2: " + dado2 + ", Dado 3: " + dado3 + ", Suma: " + suma_dados);
         }
-        
-        
 
+        int sumadados = 0;
+
+        for (int j = 0;  j < 10; j++)
+        {
+            Debug.Log("Iteración " + (j + 1));
+        }
+
+        sumadados += Random.Range(1, 7);
+
+
+        // mas generalizado, para n tiradas de n dados de n caras, y registrar el histograma de resultados
+
+        
+        int n_dados = 3;
+
+        int n_caras = 6;
+
+        int n_tiradas = 100;
+
+        int array tiradas = new int[n_dados * n_caras + 1];
+
+        for (int i = 0; i < n_tiradas; i++)
+        {
+             sumadados = 0;
+            for (int j = 0; j < n_dados; j++)
+            {
+                int sumaresultado = 0;
+            }
+          
+            for (int j = 0; j < n_dados; j++)
+            {
+    
+                suma_resultado += Random.Range (1, n_caras +1);
+            }
+
+            Tiradas[suma_resultados]++;
+        }
+        for ( int i=1; i < Tiradas.Length; i++)
+        {
+            Debug.Log("Suma: " + i + ", Frecuencia: " + Tiradas[i]);
+        }
+
+        // ahora hacerlo con while 
+
+        int n_tiradas_while = 100;
+
+        while (n_tiradas_while > 0)
+        {
+            int suma_dados = 0;
+            for (int j = 0; j < n_dados; j++)
+            {
+                suma_dados += Random.Range(1, n_caras + 1);
+            }
+            Tiradas[suma_dados]++;
+            n_tiradas_while--;
+        }
+
+        Debug.Log("Resultados con while:");
+
+        // estructura de datos estatica para la vida de enemigos 
+
+        int n_enemigos = 5;
+        
+        int array vida_enemigos = new int [n_enemigos];
+
+        while (n_enemigos > 0)
+        {
+            int vida = Random.Range(50, 101);
+            vida_enemigos[n_enemigos - 1] = vida;
+            Debug.Log("Enemigo " + n_enemigos + " tiene vida: " + vida);
+            n_enemigos--;
+        }
+        Debug.Log("Fin de la simulación de enemigos");
 
 
     }
