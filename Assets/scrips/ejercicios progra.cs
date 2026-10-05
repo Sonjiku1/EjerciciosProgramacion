@@ -114,6 +114,12 @@ public class ejerciciosprogra : MonoBehaviour
         {
             Debug.Log("Paper wins");
         }
+
+
+
+
+
+
     }
 
 
