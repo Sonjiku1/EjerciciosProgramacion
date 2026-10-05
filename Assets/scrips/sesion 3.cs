@@ -133,6 +133,23 @@ public class sesion3 : MonoBehaviour
         }
         Debug.Log("Fin de la simulación de enemigos");
 
+        // estructura de datos dinamica para la vida de enemigos
+
+        List<int> vida_enemigos_dinamica = new List<int>();
+
+        enemies.Add(4);
+
+        enemies.Add(10);
+
+        enemies.Add(45);
+
+       foreach (int vida in vida_enemigos_dinamica)
+        {
+            Debug.Log("Enemigo tiene vida: " + vida);
+        }
+        Debug.Log("Fin de la simulación de enemigos dinamica");
+
+
 
     }
 
